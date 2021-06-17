@@ -1,3 +1,5 @@
+import sys
+
 db = {
     'user': 'root',
     'password': '1234',
@@ -10,11 +12,11 @@ DB_URL = f"mysql+mysqlconnector://{db['user']}:{db['password']}@{db['host']}:{db
 
 class Config(object):
     VERSION = 0.1
-    SECRET_KEY = b'\x84:\xfdJi\xbc\xbe%\xf2%ZIc3\x06|'
+    SECRET_KEY = sys.argv[1]
 
 
 class DevelopmentConfig(Config):
-    HOST = '127.0.0.1'
+    HOST = '0.0.0.0'
     PORT = 5000
     ENV = 'development'
     DEBUG = True
@@ -23,7 +25,7 @@ class DevelopmentConfig(Config):
 
 
 class ProductionConfig(Config):
-    HOST = '127.0.0.1'
+    HOST = '0.0.0.0'
     PORT = 5000
     ENV = 'production'
     DEBUG = False

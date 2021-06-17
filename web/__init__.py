@@ -7,9 +7,11 @@ from web.config.config import config_by_name
 db = SQLAlchemy()
 migrate = Migrate()
 
+
 def create_app(config_name):
     app = Flask(__name__)
     app.config.from_object(config_by_name[config_name])
+    app.secret_key = app.config['SECRET_KEY']
 
     # ORM
     db.init_app(app)
