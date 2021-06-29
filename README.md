@@ -31,7 +31,7 @@ python run.py {some options}
 
 ## Author
 ```
-Mina Kim, Yonsei Univ. Researcher, since 2020.08 ~
+Mina Kim, Yonsei Univ. Researcher, since 2020.08 ~ 2021.06
 Chanwoo Gwon, Yonsei Univ. Researcher, since 2020.05 ~
 ```
 
